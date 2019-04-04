@@ -13,7 +13,7 @@ class RandomTest extends TestCase
      *
      * @dataProvider providerNext
      */
-    public function testGetNext($expNums, $actNum)
+    public function testGetNext(array $expNums, int $actNum):void
     {
         $testRandom = new Random($actNum);
         $actNums = [];
@@ -41,7 +41,7 @@ class RandomTest extends TestCase
      *
      * @dataProvider providerRes
      */
-    public function testReset($expNum, $actNum)
+    public function testReset(int $expNum, int $actNum):void
     {
         $testRandom = new Random($actNum);
 
@@ -57,7 +57,7 @@ class RandomTest extends TestCase
     }
 
     // провайдер значений для теста метода reset
-    public function providerRes()
+    public function providerRes():array
     {
         return array(
             array(6, 7)

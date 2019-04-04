@@ -12,7 +12,7 @@ class CalculateAverageTest extends TestCase
      *
      * @dataProvider providerAver
      */
-    public function testAver($expected, $actual)
+    public function testAver(float $expected, array $actual):void
     {
         $testFunc = calculateAverage($actual);
 
@@ -20,7 +20,7 @@ class CalculateAverageTest extends TestCase
     }
 
     // провайдер значений
-    public function providerAver()
+    public function providerAver():array
     {
         return array(
             array(3, [1, 2, 6]),

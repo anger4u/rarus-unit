@@ -28,7 +28,7 @@ class CircleTest extends TestCase
      *
      * @dataProvider providerArea
      */
-    public function testGetArea($expArea, $actArea)
+    public function testGetArea(float $expArea, float $actArea):void
     {
         $testCircle = new Circle($actArea);
 
@@ -38,7 +38,7 @@ class CircleTest extends TestCase
     }
 
     // провайдер значений для площади
-    public function providerArea()
+    public function providerArea():array
     {
         return array(
             array(113.09733552923255, 6),
@@ -55,7 +55,7 @@ class CircleTest extends TestCase
      *
      * @dataProvider providerCircumference
      */
-    public function testGetCircumference($expCircum, $actCircum)
+    public function testGetCircumference(float $expCircum, float $actCircum):void
     {
         $testCircle = new Circle($actCircum);
 
@@ -65,7 +65,7 @@ class CircleTest extends TestCase
     }
 
     // провайдер значений для длинны
-    public function providerCircumference()
+    public function providerCircumference():array
     {
         return array(
             array(37.699111843078, 6),

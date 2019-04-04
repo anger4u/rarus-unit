@@ -12,7 +12,7 @@ class GetSameParityTest extends TestCase
      *
      * @dataProvider providerParity
      */
-    public function testParity($expected, $actual)
+    public function testParity(array $expected, array $actual):void
     {
 
         $testFunc = getSameParity($actual);
@@ -21,7 +21,7 @@ class GetSameParityTest extends TestCase
     }
 
     // провайдер значений
-    public function providerParity()
+    public function providerParity():array
     {
         return array(
             array([1, 3, 5], [1, 2, 3, 5, 6]),

@@ -24,7 +24,7 @@
  * calculateAverage($temperatures); // => null
  *
  */
-function calculateAverage($arr)
+function calculateAverage(array $arr):float
 {
     if (empty($arr)) {
         print_r('массив пуст ');

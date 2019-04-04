@@ -20,7 +20,7 @@
  * Подсказки Проверка чётности - остаток от деления: $item % 2 == 0 — чётное число Если на вход функции передан пустой
  * массив, то она должна вернуть пустой массив. Проверить массив на пустоту можно с помощью функции empty
  */
-function getSameParity($arr)
+function getSameParity(array $arr):array
 {
     if (empty($arr)) {
         return [];
@@ -33,5 +33,6 @@ function getSameParity($arr)
             $result[] = $item;
         }
     }
+
     return $result;
 }
