@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 class RandomTest extends TestCase
 {
     /**
+     * Тест метода getNext класса Random
      * @param $expNums
      * @param $actNum
      *
@@ -24,7 +25,7 @@ class RandomTest extends TestCase
         $this -> assertSame($expNums, $actNums);
     }
 
-    // провайдер значений для следую
+    // провайдер значений для теста метода getNext
     public function providerNext()
     {
         return array(
@@ -33,6 +34,8 @@ class RandomTest extends TestCase
     }
 
     /**
+     * Тест метода reset класса Random
+     *
      * @param $expNum
      * @param $actNum
      *
@@ -53,7 +56,7 @@ class RandomTest extends TestCase
         $this -> assertSame($expNum, $testRes);
     }
 
-    // провайдер значений для площади
+    // провайдер значений для теста метода reset
     public function providerRes()
     {
         return array(
